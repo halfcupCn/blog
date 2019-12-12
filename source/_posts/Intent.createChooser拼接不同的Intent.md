@@ -22,3 +22,6 @@
 ```
 
 可以看到，关键代码就是`chooseIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, arrayOf<Parcelable>(cameraIntent))`，加上了这个参数之后，就可以生成不同类型的Intent了。如果你还有别的需要，比如选择文件既想选择已经存在的，又想直接创建新的文件，那么就可以通过这个参数来拼接生成你需要的Chooser对话框了。
+
+## 补充
+如果对应的Intent的action是需要权限的，比如拍照或者录制，同时针对的是Android 6以上的设备，请先动态获取权限，获取之后再继续操作。
