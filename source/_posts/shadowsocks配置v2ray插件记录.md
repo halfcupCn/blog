@@ -1,0 +1,2 @@
+>https://funnyjs.com/shadowsocks_v2ray/
+大体上都按照苏莉安大神的步骤来配置就可以了，但是我的vps上配置以后出现了`unable to parse config:permission denied`的错误，后来查询之后发现是因为shadowoscks-libev的systemd配置有问题，默认配置是有`user:nouser`的配置的，删除掉即可。如果不知道配置文件的位置，可以使用`sudo systemctl status shadowsocks-libev`来查看，第一行就是配置文件的位置。
